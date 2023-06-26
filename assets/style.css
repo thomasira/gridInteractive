@@ -1,0 +1,113 @@
+:root{
+    --greenBright: rgb(11, 239, 118);
+    --purpleMid: rgb(131, 24, 198);
+    --redPale:  rgb(251, 79, 79);
+}
+
+-------------------------------------------
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'helvetica', arial;
+}
+body{
+    text-align: center;
+    background-color:black;
+}
+header{
+    padding: 1em;
+    color: white;
+}
+main{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main>div{
+    height: 40vw;
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(13, minmax(10px, 100px));
+    grid-template-rows: repeat(1fr);
+}
+div>*{
+    min-height: 10px;
+}
+.smile:hover{
+    background-color: var(--redPale);
+}
+span{
+    background-color: var(--greenBright);
+    transition-duration: 20s;
+}
+span:hover{
+    background-color: var(--purpleMid);
+    transition-duration: 0s;
+}
+span:active{
+    background-color:var(--redPale);
+    transition-duration: 2s;
+}
+button{
+    background-color: var(--greenBright);
+    font-size: var(--textButton);
+    border: 0;
+    transition-duration: 20s;
+}
+button:hover{
+    background-color: var(--redPale);
+    color:blueviolet;
+    transition-duration: 0s;
+}
+button:active{
+    background-color:var(--purpleMid);
+    color:var(--greenBright);
+    transition-duration: 6s;
+} 
+
+/*----------VERSION 1---------------
+
+main>div{
+    flex: 0 1 40%;
+}
+nav{
+    height: 40vw;  
+    display: grid;
+    grid-template-columns: repeat(5, minmax(35px, 200px));
+    grid-template-rows: repeat(1fr);
+} */
+/* will have to declare min-height in other element...?*//*view-width is what the flex is based on, hence height is directly linked to width of element(if flex is equal to vw)*/
+/* nav>*{
+    min-height: 35px;  
+} 
+span{
+    background-color:black;
+    transition-duration: 4s;
+}
+span:hover{
+    border-radius: 50%;
+    background-color: var(--greenBright);
+    transition-duration: 0s;
+}
+span:active{
+    background-color:var(--yellowBright);
+    transition-duration: 6s;
+}
+button{
+    background-color: var(--greenBright);
+    font-size: var(--textButton);
+    border: 0;
+    transition-duration: 4s;
+}
+button:hover{
+    background-color: var(--yellowBright);
+    color:blueviolet;
+    transition-duration: .1s;
+}
+button:active{
+    background-color: rgb(255, 255, 255);
+    color:var(--greenBright);
+    transition-duration: 6s;
+} */
